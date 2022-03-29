@@ -1,9 +1,8 @@
 var express = require('express');
 var app = express();
-app.listen(3000);
-app.listen(3000);
+app.use('/', express.static(__dirname + '/public/style.css'));
 app.get ("/", function(req, res) {
-  res.send("Hello Express");
+   res.sendFile(__dirname + '/views/index.html')
 });
 
 
